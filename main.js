@@ -62,16 +62,17 @@ const container = document.getElementById('container');
 
 //Effettuo un CICLE FOREACH dove ciclo tutti gli oggetti presenti nell'ARRAY
 posts.forEach((el) => {
-    //Destrutturazione di media e likes
-    let {media, likes, created} = el
+    //Destrutturazione
+    let {media, likes, created, author} = el;
+    let {image, name} = author;
     container.innerHTML += `<div class="post">
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
-                        <img class="profile-pic" src="${el.author.image}" alt="${el.author.image}">                    
+                        <img class="profile-pic" src="${image}" alt="${image}">                    
                     </div>
                     <div class="post-meta__data">
-                        <div class="post-meta__author">${el.author.name}</div>
+                        <div class="post-meta__author">${name}</div>
                         <div class="post-meta__time">${created}</div>
                     </div>                    
                 </div>

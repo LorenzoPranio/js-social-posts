@@ -33,7 +33,11 @@ MILESTONE 1
 2.1.-Inserisco nel container recuperato tutti gli elementi dell'HTML
 
 MILESTONE 2
-3.-
+3.-Recupero il bottone per il like
 
-4.-
+4.-Creiamo un secondo array dove verranno inseriti gli ID dei post al quale abbiamo messo like
+
+5.-Creo un evento click 
+5.1.-Il colore del bottone deve cambiare e diventare verde
+5.2.-Il counter dei like deve aumentare di 1
 

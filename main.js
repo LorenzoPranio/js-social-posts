@@ -62,6 +62,8 @@ const container = document.getElementById('container');
 
 //Effettuo un CICLE FOREACH dove ciclo tutti gli oggetti presenti nell'ARRAY
 posts.forEach((el) => {
+    //Destrutturazione di media e likes
+    let {media, likes, created} = el
     container.innerHTML += `<div class="post">
             <div class="post__header">
                 <div class="post-meta">                    
@@ -70,13 +72,13 @@ posts.forEach((el) => {
                     </div>
                     <div class="post-meta__data">
                         <div class="post-meta__author">${el.author.name}</div>
-                        <div class="post-meta__time">4 mesi fa</div>
+                        <div class="post-meta__time">${created}</div>
                     </div>                    
                 </div>
             </div>
             <div class="post__text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>
             <div class="post__image">
-                <img src="${el.media}" alt="">
+                <img src="${media}" alt="">
             </div>
             <div class="post__footer">
                 <div class="likes js-likes">
@@ -87,7 +89,7 @@ posts.forEach((el) => {
                         </a>
                     </div>
                     <div class="likes__counter">
-                        Piace a <b id="like-counter-1" class="js-likes-counter">${el.likes}</b> persone
+                        Piace a <b id="like-counter-1" class="js-likes-counter">${likes}</b> persone
                     </div>
                 </div> 
             </div>            

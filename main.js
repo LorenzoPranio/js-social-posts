@@ -90,9 +90,17 @@ posts.forEach((el) => {
                         </a>
                     </div>
                     <div class="likes__counter">
-                        Piace a <b id="like-counter-1" class="js-likes-counter">${likes}</b> persone
+                        Piace a <b id="like-counter-${id}" class="js-likes-counter">${likes}</b> persone
                     </div>
                 </div> 
             </div>            
         </div>`
 })
+
+//MILESTONE 2
+//Recupero il bottone per il like
+const like_btn = document.querySelectorAll('.js-like-button');
+
+const like_counter = document.querySelectorAll('.js-likes-counter');
+
+let likes_posts = [];

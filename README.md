@@ -25,3 +25,15 @@ Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzion
 
 
 *|SOLUZIONE|*
+
+MILESTONE 1
+1.-Recupero il contenitore dal DOM
+
+2.-Effettuo un CICLE FOREACH dove ciclo tutti gli oggetti presenti nell'ARRAY
+2.1.-Inserisco nel container recuperato tutti gli elementi dell'HTML
+
+MILESTONE 2
+3.-
+
+4.-
+

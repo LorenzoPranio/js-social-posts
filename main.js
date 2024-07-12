@@ -84,7 +84,7 @@ posts.forEach((el) => {
             <div class="post__footer">
                 <div class="likes js-likes">
                     <div class="likes__cta">
-                        <a class="like-button  js-like-button" href="#" data-postid="${id}">
+                        <a class="like-button  js-like-button" href="#${id}" data-postid="${id}">
                             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                             <span class="like-button__label">Mi Piace</span>
                         </a>
@@ -104,3 +104,20 @@ const like_btn = document.querySelectorAll('.js-like-button');
 const like_counter = document.querySelectorAll('.js-likes-counter');
 
 let likes_posts = [];
+
+//Creo un evento click 
+like_btn.forEach((el) => {
+    el.addEventListener("click", function(){
+        el.classList.add("like-button--liked");
+        const post_id = this.getAttribute('data-postid');
+        const like_counter = document.getElementById(`like-counter-${post_id}`);
+        let current_likes = parseInt(like_counter.innerText);
+        if (!likes_posts.includes(post_id)) {
+            likes_posts.push(post_id);
+            current_likes++;
+            this.classList.add('like-button--liked');
+        }
+        like_counter.innerText = current_likes;
+        console.log(likes_posts);
+    })
+})

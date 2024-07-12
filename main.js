@@ -63,7 +63,7 @@ const container = document.getElementById('container');
 //Effettuo un CICLE FOREACH dove ciclo tutti gli oggetti presenti nell'ARRAY
 posts.forEach((el) => {
     //Destrutturazione
-    let {media, likes, created, author} = el;
+    let {id, media, likes, created, author} = el;
     let {image, name} = author;
     container.innerHTML += `<div class="post">
             <div class="post__header">
@@ -84,7 +84,7 @@ posts.forEach((el) => {
             <div class="post__footer">
                 <div class="likes js-likes">
                     <div class="likes__cta">
-                        <a class="like-button  js-like-button" href="#" data-postid="1">
+                        <a class="like-button  js-like-button" href="#" data-postid="${id}">
                             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                             <span class="like-button__label">Mi Piace</span>
                         </a>

@@ -55,3 +55,8 @@ const posts = [
         "created": "2021-03-05"
     }
 ];
+
+//SOLUZIONE
+//Recupero il contenitore dal DOM
+const container = document.getElementById('container');
+
